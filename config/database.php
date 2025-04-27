@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'oracle'), // Changed default to Oracle
 
     /*
     |--------------------------------------------------------------------------
@@ -28,19 +28,6 @@ return [
     | is supported by Laravel. You're free to add / remove connections.
     |
     */
-
-    'oracle' => [
-    'driver' => 'oracle',
-    'host' => 'localhost',
-    'port' => '1521',
-    'database' => 'FREE',
-    'service_name' => 'sid_alias',
-    'username' => 'SYSTEM',
-    'password' => 'Novaliches@1117',
-    'charset' => '',
-    'prefix' => '',
-    ],
-
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
@@ -121,12 +108,21 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
-        
-    ],
+
+        'oracle' => [
+            'driver' => 'oci8',
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '1521'),
+            'database' => '',  // Leave empty if using service_name
+            'service_name' => env('DB_SERVICE_NAME', 'FREE'), // Must match SQL Developer
+            'username' => env('DB_USERNAME', 'SYSTEM'),
+            'password' => env('DB_PASSWORD', 'Novaliches@1117'),
+            'charset' => 'AL32UTF8',
+                ],
 
     /*
     |--------------------------------------------------------------------------
-    | Migration Repository Table
+    | Migration Repository Tab  le
     |--------------------------------------------------------------------------
     |
     | This table keeps track of all the migrations that have already run for
