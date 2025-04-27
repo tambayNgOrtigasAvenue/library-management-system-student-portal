@@ -23,9 +23,9 @@
                     <div class="form-group">
                         <label for="student_id">Student ID Number</label>
                         <input type="text" class="form-control" id="student_id" name="student_id" 
-                               placeholder="Enter your student ID" required pattern="[0-9]{8}">
-                        <small class="form-text text-muted">8-digit student ID number</small>
-                        <div class="invalid-feedback">Please enter a valid 8-digit student ID.</div>
+                        placeholder="Enter your student ID (e.g., 21-2345)">
+                        <small class="form-text text-muted">6-digit student ID number</small>
+                        <div class="invalid-feedback">Please enter a valid 6-digit student ID.</div>
                     </div>
 
                     <div class="form-row">

@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, #3498db, #2c3e50);
+    background: linear-gradient(to bottom, #3498db, #7daecf);
     color: #fff;
 }
 .form-container {
@@ -14,7 +14,7 @@ body {
     border: 1px solid #3498db;
 }
 .btn-primary {
-    background-color: #3498db;
+    background-color: #236997;
     border: none;
     border-radius: 5px;
     padding: 10px 25px;
