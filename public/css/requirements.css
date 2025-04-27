@@ -1,0 +1,71 @@
+body {
+    background: linear-gradient(to right, #76af79, #339638);
+    color: black;
+}
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#successMessage {
+    display: none;
+}
+.list-group-item {
+    color: rgb(255, 252, 252);
+}
+.requirements-title {
+    font-weight: bold;
+    font-size: 1.2em;   
+    color: #00796b;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card-header {
+    background-color: #00796b;
+    color: rgba(255, 255, 255, 0.712);
+}
+.card-footer a {
+    color: #00796b;
+    font-weight: bold;
+}
+.requirements-container {
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #ffffffb2;
+}
+.requirements-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffffa4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #4188da;
+}
+.btn-success {
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+}
+.btn-success:hover {
+    background-color: #005f4f;
+}
+.form-group label {
+    font-weight: bold;
+    color: #1ab6dd;
+}
+.view-requirements {
+    color: rgb(182, 78, 78);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+}
