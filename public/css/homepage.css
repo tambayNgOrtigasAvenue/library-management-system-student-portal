@@ -1,69 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-    scroll-behavior: smooth;
-}
+
 body 
 {
-    min-height: 100vh;
-    overflow-x: hidden;
-    background: linear-gradient(#a0be16,#7597de);
+    background: linear-gradient(to bottom, #3498db, #7daecf);
+    color: #fff;
 }
-header 
-{
-    position: absolute;
-    background-color: #66bb6aa9;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-header .logo 
-{
-        color: #000000;
-        font-weight: 500;
-        text-decoration: none;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-family: Poppins;
-}
-header ul
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
-  
-}
-header ul li
-{
-    list-style: none;
-    margin-left: 20px;
-    
-}
-header ul li a 
-{
-        text-decoration: none;
-        padding: 6px 15px;
-        color: #000;
-        border-radius: 20px;
-}
-header ul li a:hover,
-header ul li a.active 
-{
-        background: #ffffff;
-        color: #000;
-        font-family: Poppins;
-}
+
 section
 {
     position: relative;
@@ -76,19 +18,8 @@ section
     overflow:hidden;
 
 }
-section::before
-{
-    content:'';
-    position: absolute;
-    bottom:0;
-    width: 100%;
-    height: 70px;
-    background: linear-gradient(to top,#66bb6a ,transparent);
-    z-index: 900;
-    justify-content: center;
-    align-items: center;
-}
-section img
+
+section img 
 {
     position: absolute;
     top: 0;
@@ -98,42 +29,8 @@ section img
     object-fit: cover;
     pointer-events: none;
     opacity: 80%;
-        
-}
-#text
-{
-    position: absolute;
-    right:-350px;
-    color: #000000;
-    white-space: nowrap;
-    font-size: 3.5vw;
-    z-index: 9;
-    font-family: Poppins;        
-    
-}
-#btn
-{
-    text-decoration: none;
-    display: inline-block;
-    padding: 6px 30px;
-    border-radius: 40px;
-    background: #4caf4fa2;
-    color: #000000;
-    font-size: 1.5em;
-    z-index: 9;
-    transform: translateY(100px);
 }
 
-.btn:hover {
-    background-color: #357aed; 
-  }
-.sec 
-{
-    position: relative;
-    padding: 100px;
-    background: #66bb6aa6;
-    
-}
 .sec h2
 {
         font-size: 3.5em;
@@ -160,17 +57,25 @@ section img
 .container .box{
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
     border-radius: 5px;
-    background: #118f49;
     text-align: center;
     padding:30px 20px;
+    background-color: #236997;
+    font-size: 5rem;
 }
 
-.container .box img{
-    width: 150px;
-}
 
 .container .box h3{
-    color: #443;
+    color: rgb(255, 255, 255);
     font-size: 22px;
     padding: 10px 0;
+}
+
+.btn-primary {
+    background-color: #236997;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+.btn-primary:hover {
+    background-color: #2980b9;
 }
