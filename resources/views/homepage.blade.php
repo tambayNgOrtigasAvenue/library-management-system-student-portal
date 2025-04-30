@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Home Page - QCU LMS</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/typography.css') }}">
+    @include('layouts.header')
 </head>
 
     <body>
@@ -20,7 +20,7 @@
             <h2 class="text-white" style="font-size: 7rem; font-weight: bold;">
                 QCU Library Management System
             </h2>
-            <a href="https://maps.app.goo.gl/fyNVyDJ2AmVwYjGm8"  class="btn btn-primary mt-3 rounded-pill">
+            <a href="https://maps.app.goo.gl/2vzsFHxe95cbiea18"  class="btn btn-primary mt-3 rounded-pill font-weight-bold">
                 Navigate QCU Libraries
             </a>
         </div>
