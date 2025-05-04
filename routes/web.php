@@ -25,3 +25,8 @@ Route::get('/test-oracle', function() {
 Route::get('/success-message', function(){
     return view('succesfull');
 });
+
+use App\Http\Controllers\LogController;
+
+Route::get('/attendance', [LogController::class, 'create'])->name('logs.create');
+Route::post('/attendance', [LogController::class, 'store'])->name('logs.store');
