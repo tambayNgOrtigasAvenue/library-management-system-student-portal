@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Entry Form - QCU LMS</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/studentform.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/typography.css') }}">
+    @include('layouts.header')
 </head>
 
 <body>
@@ -23,9 +24,9 @@
                     <div class="form-group">
                         <label for="student_id">Student ID Number</label>
                         <input type="text" class="form-control" id="student_id" name="student_id" 
-                               placeholder="Enter your student ID" required pattern="[0-9]{8}">
-                        <small class="form-text text-muted">8-digit student ID number</small>
-                        <div class="invalid-feedback">Please enter a valid 8-digit student ID.</div>
+                        placeholder="Enter your student ID (e.g., 21-2345)">
+                        <small class="form-text text-muted">6-digit student ID number</small>
+                        <div class="invalid-feedback">Please enter a valid 6-digit student ID.</div>
                     </div>
 
                     <div class="form-row">
@@ -111,7 +112,7 @@
                     </div>
 
                     <div class="form-group text-center mt-4">
-                        <button type="submit" class="btn btn-primary">Submit Entry</button>
+                        <button type="submit" class="btn btn-primary rounded-pill px-3">Submit Entry</button>
                     </div>
                 </form>
 
@@ -121,8 +122,8 @@
             </div>
         </div>
     </div>
-
     @include('partials.footer')
+   
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

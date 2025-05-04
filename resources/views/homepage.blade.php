@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    @include('layouts.head')
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home Page - QCU LMS</title>
+    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/typography.css') }}">
+    @include('layouts.header')
+</head>
+
     <body>
-        @include('layouts.nav')
-        
-        <section>
-            <img src="{{ asset('images/qcu_library.jpg') }}" id="homepage" alt="QCU Library">
-            <h2 id="text">QCU Library Management System</h2>
-            <a href="https://maps.app.goo.gl/fyNVyDJ2AmVwYjGm8" id="btn" class="btn">Navigate QCU Libraries</a>
-        </section> 
-        
+    @include('layouts.nav')
+
         <div class="sec" id="sec">
-            <h2>OUR LIBRARY SERVICES</h2>
-            <div class="container">
-                <div class="box">
-                    <img src="{{ asset('images/books.png') }}" alt="Book Collection">
+        <section class="text-center position-relative vh-100 w-100 p-0 m-0" style="overflow: hidden;">
+        <img src="{{ asset('img/qcu_library.png') }}" id="homepage" alt="QCU Library" style="width: 100vw; height: 100vh; object-fit: cover; filter: brightness(50%);">
+        <div class="position-absolute w-100 text-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+            <h2 class="text-white" style="font-size: 7rem; font-weight: bold;">
+                QCU Library Management System
+            </h2>
+            <a href="https://maps.app.goo.gl/2vzsFHxe95cbiea18"  class="btn btn-primary mt-3 rounded-pill font-weight-bold">
+                Navigate QCU Libraries
+            </a>
+        </div>
+    </section>
+
+            <h2 class="text-center mt-5 text-white">OUR LIBRARY SERVICES</h2>
+            <div class="container mb-5">
+                <div class="box bi bi-journals">
                     <h3>Book Collection</h3>
                 </div>
 
-                <div class="box">
-                    <img src="{{ asset('images/ebooks.png') }}" alt="E-Books">
+                <div class="box bi bi-journal-arrow-down">
                     <h3>E-Books</h3>
                 </div>
 
-                <div class="box">
-                    <img src="{{ asset('images/research.png') }}" alt="Research Assistance">
+                <div class="box bi bi-file-earmark-ruled">
                     <h3>Research Assistance</h3>
                 </div>
 
-                <div class="box">
-                    <img src="{{ asset('images/study-space.png') }}" alt="Study Spaces">
+                <div class="box bi bi-person-workspace" >
                     <h3>Study Spaces</h3>
                 </div>
 
-                <div class="box">
-                    <img src="{{ asset('images/computers.png') }}" alt="Computer Access">
+                <div class="box bi bi-pc-display-horizontal" >
                     <h3>Computer Access</h3>
                 </div>
 
-                <div class="box">
-                    <img src="{{ asset('images/printing.png') }}" alt="Printing Services">
+                <div class="box bi bi-printer" >
                     <h3>Printing Services</h3>
                 </div>
 
-                <div class="box">
-                    <img src="{{ asset('images/group-study.png') }}" alt="Group Study Rooms">
+                <div class="box bi bi-people" >
                     <h3>Group Study Rooms</h3>
                 </div>
 
-                <div class="box">
-                    <img src="{{ asset('images/reference.png') }}" alt="Reference Materials">
+                <div class="box bi bi-folder-symlink">
                     <h3>Reference Materials</h3>
                 </div>
 
-                <div class="box">
-                    <img src="{{ asset('images/archives.png') }}" alt="Archives">
+                <div class="box bi bi-archive">
                     <h3>Archives</h3>
                 </div>
             </div>
