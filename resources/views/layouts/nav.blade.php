@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-    <a class="nav-link font-weight-bold " style="font-size: 1.5rem;" href="{{ route('home') }}">Library Services</a>
+    <a class="nav-link font-weight-bold " style="font-size: 1.5rem;" href="{{ route('form') }}">Entry Log</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link font-weight-bold" style="font-size: 1.5rem;" href="#requirements">Policies</a>
+    <a class="nav-link font-weight-bold" style="font-size: 1.5rem;" href="{{ route('requirements')}}">Policies</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link font-weight-bold" style="font-size: 1.5rem;" href="{{ route('appointment.form') }}">Book Appointment</a>
+    <a class="nav-link font-weight-bold" style="font-size: 1.5rem;" href="#">Book Appointment</a>
 </li>
         </ul>
     </div>
