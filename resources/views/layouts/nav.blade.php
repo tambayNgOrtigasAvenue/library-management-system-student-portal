@@ -15,7 +15,7 @@
     <a class="nav-link font-weight-bold" style="font-size: 1.5rem;" href="{{ route('requirements')}}">Policies</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link font-weight-bold" style="font-size: 1.5rem;" href="#">Book Appointment</a>
+    <a class="nav-link font-weight-bold" style="font-size: 1.5rem;" href="{{ route('student.register') }}">Registration</a>
 </li>
         </ul>
     </div>
