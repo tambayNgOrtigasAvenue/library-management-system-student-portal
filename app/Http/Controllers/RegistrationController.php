@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\StudentRegister;
-
 class RegistrationController extends Controller
 {
     public function registerStudent(){

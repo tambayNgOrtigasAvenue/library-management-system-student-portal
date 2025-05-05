@@ -21,7 +21,7 @@
                 QCU Library Management System
             </h2>
             <a href="https://maps.app.goo.gl/2vzsFHxe95cbiea18"  class="btn btn-primary mt-3 rounded-pill font-weight-bold">
-                Navigate QCU Libraries
+                Navigate QCU Main Library
             </a>
         </div>
     </section>

@@ -86,9 +86,9 @@
                     <!--Contact Number-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="contact_no">Contact Number</label>
-                            <input type="text" class="form-control" id="contact_no" name="contact_no" 
-                                placeholder="(e.g 09xxxxxxxxx)" value="{{ old('contact_no') }}" required>
+                            <label for="contact_number">Contact Number</label>
+                            <input type="text" class="form-control" id="contact_number" name="contact_number" 
+                                placeholder="(e.g 09xxxxxxxxx)" value="{{ old('contact_number') }}" required>
                             <div class="invalid-feedback">Please enter your address.</div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                     <!--Student Status-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="status">Student Status</label>
+                            <label for="student_status">Student Status</label>
                             <select class="form-control" id="student_status" name="student_status" required>
                                 <option value="">Select your campus...</option>
                                 <option value="regular" {{ old('student_status') == 'regular' ? 'selected' : '' }}>Regular</option>

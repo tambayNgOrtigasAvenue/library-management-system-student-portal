@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LogController;
+use App\Http\Controllers\RegistrationController;
 
 Route::get('/', function () {
     return view('homepage');
@@ -16,6 +17,8 @@ Route::post('/log-student', [LogController::class, 'logStudent'])->name('log.stu
 Route::get('/student-register', function(){
     return view('student_registration');
 })->name('student.register');
+
+Route::post('/registered-student', [RegistrationController::class, 'registerStudent'])->name('student.register');
 
 // Added route because when I try to access other routes, the error is looking for this routes
 
@@ -34,12 +37,17 @@ Route::get('/requirements', function () {
 use Illuminate\Support\Facades\DB;
 
 //Test the oracle
-Route::get('/test-oracle', function() {
+Route::get('/test-connection', function() {
     try {
         DB::connection()->getPdo();
-        return "Connected to Oracle 23ai Free!";
+        $result = DB::select("SELECT * FROM v\$version");
+        return response()->json([
+            'status' => 'connected',
+            'oracle_version' => $result[0]->BANNER,
+            'tables' => DB::select("SELECT * FROM tbl_student"),
+        ]);
     } catch (\Exception $e) {
-        return "Error: " . $e->getMessage();
+        return "Connection failed: " . $e->getMessage();
     }
 });
 
