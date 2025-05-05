@@ -17,7 +17,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8 form-container">
                 <h2 class="text-center">Library Entry Form</h2>
-                <form id="entryForm" action="{{ route('log.student') }}" method="POST" autocomplete="off">
+                <form id="entryForm" action="{{ route('student.register') }}" method="POST" autocomplete="off">
                     @csrf
 
                         @if(session('success'))
@@ -64,6 +64,72 @@
                         </div>
                     </div>
 
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="sex">Sex</label>
+                            <input type="text" class="form-control" id="sex" name="sex" 
+                                placeholder="Enter your gender (e.g. Male)" value="{{ old('sex') }}" required>
+                            <div class="invalid-feedback">Please enter your sex.</div>
+                        </div>
+                    </div>
+
+                    <!--Address-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" 
+                                placeholder="Enter your home address" value="{{ old('address') }}" required>
+                            <div class="invalid-feedback">Please enter your address.</div>
+                        </div>
+                    </div>
+
+                    <!--Contact Number-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="contact_no">Contact Number</label>
+                            <input type="text" class="form-control" id="contact_no" name="contact_no" 
+                                placeholder="(e.g 09xxxxxxxxx)" value="{{ old('contact_no') }}" required>
+                            <div class="invalid-feedback">Please enter your address.</div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email">Email Address</label>
+                            <input type="text" class="form-control" id="email" name="email" 
+                                placeholder="(e.g joe@example.com)" value="{{ old('email') }}" required>
+                            <div class="invalid-feedback">Please enter your email.</div>
+                        </div>
+                    </div>
+
+                    <!--Student Status-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="status">Student Status</label>
+                            <select class="form-control" id="student_status" name="student_status" required>
+                                <option value="">Select your campus...</option>
+                                <option value="regular" {{ old('student_status') == 'regular' ? 'selected' : '' }}>Regular</option>
+                                <option value="irregular" {{ old('student_status') == 'irregular' ? 'selected' : '' }}>Irregular</option>
+                            </select>
+                            <div class="invalid-feedback">Please enter your status.</div>
+                        </div>
+                    </div>
+
+                    <!--Campus-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="campus_id">Campus</label>
+                            <select class="form-control" id="campus_id" name="campus" required>
+                                <option value="">Select your campus...</option>
+                                <option value="QCU-SB-1117" {{ old('campus_id') == 'QCU-SB-1117' ? 'selected' : '' }}>San Bartolome</option>
+                                <option value="QCU-SF-1117" {{ old('campus_id') == 'QCU-SF-1117' ? 'selected' : '' }}>San Francisco</option>
+                                <option value="QCU-BA-1117" {{ old('campus_id') == 'QCU-BA-1117' ? 'selected' : '' }}>Batasan</option>
+                            </select>
+                            <div class="invalid-feedback">Please enter your campus</div>
+                        </div>
+                    </div>
+
                     <!-- Academic Information Section -->
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -81,49 +147,16 @@
                             </select>
                             <div class="invalid-feedback">Please select your program.</div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="section">Section</label>
-                            <input type="text" class="form-control" id="section" name="section" 
-                                   placeholder="Enter your section (e.g. SBIT-2M)" required>
-                            <div class="invalid-feedback">Please enter your section.</div>
-                        </div>
                     </div>
 
-                    <!-- Entry Details -->
+                    <!--Year Graduation-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="entry_date">Date of Entry</label>
-                            <input type="date" class="form-control" id="entry_date" name="entry_date" 
-                                   value="{{ date('Y-m-d') }}" required>
+                            <label for="graduation_year">Graduation Year</label>
+                            <input type="text" class="form-control" id="graduation_year" name="graduation_year" 
+                                placeholder="Enter your graduation year (e.g. 2027)" value="{{ old('graduation_year') }}" required>
+                            <div class="invalid-feedback">Please enter your status.</div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="entry_time">Time of Entry</label>
-                            <<input type="time" class="form-control" id="entry_time" name="entry_time"
-                            value="{{ date('H:i') }}" step="1" required>
-                        </div>
-                    </div>
-
-                    <!-- Purpose of Visit -->
-                    <div class="form-group">
-                        <label for="purpose">Purpose of Visit</label>
-                        <select class="form-control" id="purpose" name="purpose" required>
-                            <option value="">Select purpose...</option>
-                            <option name="purpose" value="{{ old('borrowing') }}">Borrowing Books</option>
-                            <option name="purpose" value="{{ old('returning') }}">Returning Books</option>
-                            <option name="purpose" value="{{ old('research') }}">Research/Study</option>
-                            <option name="purpose" value="{{ old('computer') }}">Computer Use</option>
-                            <option name="purpose" value="{{ old('printing') }}">Printing Services</option>
-                            <option name="purpose" value="{{ old('librarian') }}">Librarian Consultation</option>
-                            <option name="purpose" value="{{ old('other') }}">Other</option>
-                        </select>
-                        <div class="invalid-feedback">Please select a purpose.</div>
-                    </div>
-
-                    <!-- Additional Notes -->
-                    <div class="form-group">
-                        <label for="notes">Additional Notes (Optional)</label>
-                        <textarea class="form-control" id="notes" name="notes" rows="2" 
-                                  placeholder="Any special requests or additional information"></textarea>
                     </div>
 
                     <div class="form-group text-center mt-4">

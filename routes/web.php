@@ -13,6 +13,10 @@ Route::get('/form', function(){
 
 Route::post('/log-student', [LogController::class, 'logStudent'])->name('log.student');
 
+Route::get('/student-register', function(){
+    return view('student_registration');
+})->name('student.register');
+
 // Added route because when I try to access other routes, the error is looking for this routes
 
 Route::post('/library/entry/store', function () {
